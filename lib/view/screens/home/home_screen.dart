@@ -108,6 +108,7 @@ Widget _hero(bool isWide) {
 
         Gap(30),
 
+        HireMeButton(),
       ],
     ),
   );
