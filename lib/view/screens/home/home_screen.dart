@@ -9,6 +9,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'controller/home_controller.dart';
+import 'hire_me_button_screen/hire_me_button_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -105,23 +106,9 @@ Widget _hero(bool isWide) {
           ),
         ).animate().fadeIn(),
 
-        const Gap(30),
+        Gap(30),
 
-        ElevatedButton(
-          onPressed: () =>
-              launchUrl(Uri.parse("mailto:bhavyaginiya@gmail.com")),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.themeColor,
-            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-            ),
-          ),
-          child: Text(
-            "Hire Me",
-            style: dmSansW500.copyWith(fontSize: 18, color: AppColors.white),
-          ),
-        ).animate().fadeIn().moveY(begin: 20, duration: 600.ms),
+        HireMeButton(),
       ],
     ),
   );

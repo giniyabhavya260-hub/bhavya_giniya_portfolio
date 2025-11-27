@@ -43,6 +43,9 @@ class $AssetsPngGen {
   AssetGenImage get icSplitLogo =>
       const AssetGenImage('assets/png/ic_split_logo.png');
 
+  /// File path: assets/png/ic_web.png
+  AssetGenImage get icWeb => const AssetGenImage('assets/png/ic_web.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     icGroup,
@@ -53,6 +56,7 @@ class $AssetsPngGen {
     icPainUnpaidParson,
     icParson,
     icSplitLogo,
+    icWeb,
   ];
 }
 
@@ -233,6 +237,10 @@ class $AssetsSvgGen {
   /// File path: assets/svg/ic_view.svg
   String get icView => 'assets/svg/ic_view.svg';
 
+  /// File path: assets/svg/ic_web_logo.png
+  AssetGenImage get icWebLogo =>
+      const AssetGenImage('assets/svg/ic_web_logo.png');
+
   /// File path: assets/svg/whatapp.svg.png
   AssetGenImage get whatappSvg =>
       const AssetGenImage('assets/svg/whatapp.svg.png');
@@ -297,6 +305,7 @@ class $AssetsSvgGen {
     icStar,
     icSummary,
     icView,
+    icWebLogo,
     whatappSvg,
   ];
 }
