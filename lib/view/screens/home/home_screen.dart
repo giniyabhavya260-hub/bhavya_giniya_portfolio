@@ -250,37 +250,43 @@ Widget _skills(bool isWide) {
 
 Widget _contact() {
   return Container(
-    padding: const EdgeInsets.all(40),
+    padding: const EdgeInsets.all(45),
     decoration: BoxDecoration(
-      gradient: LinearGradient(
-        colors: [Colors.indigo.shade600, Colors.indigo.shade900],
+      borderRadius: BorderRadius.circular(25),
+      gradient: const LinearGradient(
+        colors: [Color(0xFF1A1A2F), Color(0xFF252544)],
       ),
-      borderRadius: BorderRadius.circular(20),
+      boxShadow: [
+        BoxShadow(
+          color: AppColors.themeColor.withOpacity(0.35),
+          blurRadius: 45,
+          offset: const Offset(0, 25),
+        ),
+      ],
     ),
     child: Column(
       children: [
-        const Text(
+        Text(
           "Let's Work Together",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
+          style: dmSansW700.copyWith(color: Colors.white, fontSize: 30),
         ),
         const Gap(10),
-        const Text(
-          "Available for freelance & full-time opportunities.",
-          style: TextStyle(color: Colors.white70),
+        Text(
+          "Available for freelance & full-time roles.",
+          style: dmSansW400.copyWith(color: Colors.white70),
         ),
-        const Gap(20),
+        const Gap(30),
         ElevatedButton(
-          onPressed: () => launchUrl(Uri.parse("mailto:bhavya@gmail.com")),
+          onPressed: () =>
+              launchUrl(Uri.parse("mailto:bhavyaginiya@gmail.com")),
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            foregroundColor: Colors.indigo,
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+            backgroundColor: AppColors.themeColor,
           ),
-          child: const Text("Contact Me"),
+          child: const Text(
+            "Contact Me",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ],
     ),
